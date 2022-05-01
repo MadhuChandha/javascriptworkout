@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+	<head>
+	</head>
+	<body>
+		<form onsubmit="validate();">
+			<h2>Text</h2><br>
+			<textarea rows="10" cols="10" id="a"></textArea><br>
+		       search character : <input type="text" id="b"><br/>
+			<input type="submit" value="check" >
+		</form>  
+	</body>
+	<script>
+		function occurence(){
+			let text = document.getElementById("a").value;
+			let char = document.getElementById("b").value;
+			let count = 0;
+			for(let i=0;i<text.length;i++){
+				if(text.charAt(i)==char){
+					count = count + 1;
+				}
+			} 
+			alert("The number of character in the text is "+count);
+		}
+			
+	</script>
+</html>
