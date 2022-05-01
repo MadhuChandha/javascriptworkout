@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+    </head>
+    <body><form>
+            enter name:<input type="text" id="a"><br/>
+            <button name="click" onclick="validate()"></button>
+            <p id="h"></p>
+            <p id="e"></p>
+            <script>
+                function validate(){
+                 alert(hello+document.getByElementId("a").value);   
+                }
+                document.getElementById("h").innerHtml=document.lastModified;
+                let today=new Date();
+                let Date=today.getmonth()+today.getDate() +','+today.getFullYear();
+                document.getByElementId("e").innerHtml=Date;
+                </script>
+    </body>
+</html>

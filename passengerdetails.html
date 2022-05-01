@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head></head>
+	<body>
+            <form>
+			<h2>Passenger Details</h2>
+			Name : <input type="text" id="a"><br/>
+			Age : <input type="text" id="b"><br/>
+			Email Id : <input type="text" id="c"><br/>
+			Gender : <input type="text" id="d"><br/>
+			<input type="submit" value="Submit" onclick="validate()" >
+		</form> 
+	</body>
+	<script>
+		function validate(){
+			let age = document.getElementById("b").value;
+			if(isNaN(age)||age>100||age<1){
+				alert("Enter correct age");
+				return false;
+                            }
+			let mail = document.getElementById("c").value;
+			let p1 = /^[A-Za-z]+@[A-Za-z]+.[A-Za-z]/i;
+			if(!mail.match(p1)){
+				alert("Enter validate mail ");
+				return false;
+                            }
+			let gender = document.getElementById("d").value;
+			let p2 = /[M/F]/i;
+			if(!gender.match(p2)){
+				alert("Enter valid gender ");
+				return false;
+                            }
+			
+		}
+	</script>
+</html>
